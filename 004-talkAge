@@ -1,0 +1,5 @@
+username = input("사용자의 이름을 입력해주세요: ")
+
+age = int(input(username + "님 반갑습니다.\n\n나이를 입력해주세요: "))
+
+print("10년 후에는 " + str(age + 10) + "살이 되시네요~")
