@@ -8,6 +8,7 @@
 
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMessageBox
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -43,8 +44,10 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def btnOrder1Click(self):
-        print("A")
-        QMessageBox.about(self, "message", "clicked")
+        print("AB")
+        msgbox = QMessageBox(self)
+        msgbox.question(self, 'MessageBox title', 'Here comes message',
+                        QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
